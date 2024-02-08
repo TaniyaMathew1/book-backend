@@ -17,4 +17,8 @@ router.post("/book-search",async(req,res)=>{
     res.json(data)
 })
 
+router.get("/book-view",async(req,res)=>{
+    let data=await bookModel.find()
+    res.json(data)
+})
 module.exports=router
